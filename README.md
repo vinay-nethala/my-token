@@ -1,34 +1,58 @@
 # MyToken (MTK)
 
-## Overview
-MyToken is a simple ERC-20 compatible token built on the Ethereum blockchain for learning purposes. It implements the core standards required for a functional cryptocurrency, including transfers, allowances, and event logging.
+## 📌 Overview
+MyToken is a simple ERC-20 compatible token built on the Ethereum blockchain for learning purposes. This project demonstrates how cryptocurrency tokens work using Solidity smart contracts and the Remix IDE.
 
-## Token Details
-- **Name**: MyToken
-- **Symbol**: MTK
-- **Decimals**: 18
-- **Total Supply**: 1,000,000 MTK
-- **Contract Address**: [REPLACE_WITH_YOUR_CONTRACT_ADDRESS_FROM_REMIX]
+It includes all core ERC-20 functionalities such as transfers, approvals, allowances, balance tracking, and event logging.
 
-## Features
-- ? **Standard ERC-20 Implementation**: Fully compatible with wallets and exchanges.
-- ? **Transfer**: Users can send tokens to any Ethereum address.
-- ? **Allowances**: Users can approve third parties (like DEXs) to spend tokens on their behalf.
-- ? **Events**: Emits `Transfer` and `Approval` events for on-chain tracking.
-- ? **Safety**: Includes validation for zero-addresses and insufficient balances.
+---
 
-## How to Deploy
-1. Open [Remix IDE](https://remix.ethereum.org/).
-2. Create a new file named `MyToken.sol`.
-3. Paste the smart contract source code.
-4. Compile using Solidity compiler version `0.8.x`.
-5. Navigate to the "Deploy & Run" tab.
-6. Enter the initial supply (with 18 zeros) in the deploy parameter.
-7. Click "Deploy".
+## 🪙 Token Details
+- **Name**: MyToken  
+- **Symbol**: MTK  
+- **Decimals**: 18  
+- **Total Supply**: 1,000,000 MTK  
+- **Standard**: ERC-20  
 
-## Usage Examples
+---
 
-### Check Balance
-Call the `balanceOf` function with an address:
-```solidity
-balanceOf("0xYourAddress...")
+## ✅ Features
+- ✅ Standard ERC-20 implementation  
+- ✅ Transfer tokens between addresses  
+- ✅ Approve and `transferFrom` functionality  
+- ✅ Event emission for transparency  
+- ✅ Balance tracking  
+- ✅ Allowance tracking  
+- ✅ Helper functions for easier access  
+
+---
+
+## 🚀 How to Deploy
+
+1. Open Remix IDE: https://remix.ethereum.org  
+2. Create a new file named `MyToken.sol`  
+3. Paste the smart contract code  
+4. Go to the **Solidity Compiler** tab  
+5. Select compiler version **0.8.x or higher**  
+6. Click **Compile MyToken.sol**  
+7. Go to the **Deploy & Run Transactions** tab  
+8. Select **JavaScript VM (London)** as the environment  
+9. Enter the initial supply in the constructor:
+
+## 🔁 Transfer Tokens
+- transfer(address to, uint256 amount) → returns bool
+
+## ✅ Approve Spending
+- approve(address spender, uint256 amount) → returns bool
+
+## 🔄 Transfer on Behalf (Using Allowance)
+- transferFrom(address from, address to, uint256 amount) → returns bool
+
+## 📊 Check Allowance
+- allowance(address owner, address spender) → returns uint256
+
+## 📦 Get Total Supply (Helper Function)
+- getTotalSupply() → returns uint256
+
+## 🧾 Get Token Information (Helper Function)
+- getTokenInfo() → returns (string, string, uint8, uint256)
